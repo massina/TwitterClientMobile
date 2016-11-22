@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClientMobile.Droid",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClientMobile.iOS", "TwitterClientMobile\TwitterClientMobile.iOS\TwitterClientMobile.iOS.csproj", "{8F5A419C-FA83-472A-A2FA-709E8150B4B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EFE53B37-9D1D-4203-B8A2-2D5D8FE88077}"
+	ProjectSection(SolutionItems) = preProject
+		IMPORTANT NOTES.txt = IMPORTANT NOTES.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

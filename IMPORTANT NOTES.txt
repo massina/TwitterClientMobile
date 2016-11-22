@@ -1,0 +1,2 @@
+Because I am running windows 8, I had to just focus on the Android app only, but as you can see this is a Xamarin forms,
+and you can simply adjust it to work with other platoforms with ease or with minimal configuration settings.
