@@ -40,20 +40,20 @@ namespace TwitterClientMobile.ViewModels
             }
         }
 
-        private GeoCode _geoCodeJSONClass;
-        public GeoCode GeoCodeJSONClass
+        private GeoCode _geoCode;
+        public GeoCode GeoCode
         {
-            get { return _geoCodeJSONClass; }
+            get { return _geoCode; }
             set
             {
-                if (_geoCodeJSONClass == value)
+                if (_geoCode == value)
                     return;
-                _geoCodeJSONClass = value;
-                OnPropertyChanged(nameof(GeoCodeJSONClass));
+                _geoCode = value;
+                OnPropertyChanged(nameof(GeoCode));
             }
         }
 
-        public async Task InitTweets(double lat = 0, double lng = 0, int radious = 5, string searchTerm = "@")
+        public async Task InitTweetsByGeoLocation(double lat = 0, double lng = 0, int radious = 5, string searchTerm = "@")
         {
             var auth = new SingleUserAuthorizer()
             {

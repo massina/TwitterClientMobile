@@ -28,7 +28,7 @@ namespace TwitterClientMobile.Views
 
             var searchBarSearchTerm = new SearchBar
             {
-                Placeholder = "Enter a location name to get tweets",
+                Placeholder = "Enter a location to get tweets",
                 FontSize = 18,
                 PlaceholderColor = Color.Gray,
                 VerticalOptions = LayoutOptions.FillAndExpand
@@ -129,14 +129,14 @@ namespace TwitterClientMobile.Views
                 // Because I am stucked in building an autocomplete control, I decided to get the first address.
                 var addressUrl = StrGeoCodingUrl + _viewModel.GoogleMapPlace.Predictions[0].Description;
                 var addressGeo = await DownloadHelper.DownloadStringAsync(addressUrl);
-                _viewModel.GeoCodeJSONClass = JsonConvert.DeserializeObject<GeoCode>(addressGeo);
+                _viewModel.GeoCode = JsonConvert.DeserializeObject<GeoCode>(addressGeo);
 
-                var lat = _viewModel.GeoCodeJSONClass.Results[0].Geometry.Location.Lat;
-                var lng = _viewModel.GeoCodeJSONClass.Results[0].Geometry.Location.Lng;
+                var lat = _viewModel.GeoCode.Results[0].Geometry.Location.Lat;
+                var lng = _viewModel.GeoCode.Results[0].Geometry.Location.Lng;
 
                 try
                 {
-                    await _viewModel.InitTweets(lat, lng);
+                    await _viewModel.InitTweetsByGeoLocation(lat, lng);
 
                 }
                 catch (Exception ex)
